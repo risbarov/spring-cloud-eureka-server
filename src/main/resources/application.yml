@@ -7,7 +7,9 @@ eureka:
     client:
         registerWithEureka: false
         fetchRegistry: false
-        server:
-            waitTimeInMsWhenSyncEmpty: 0
-    server:
-        enableSelfPreservation: false
+
+# При использовании данной опции недоступные клиенты удаляются из реестра даже
+# в том случае, если отключен healthcheck. Подробнее о self-preservation режиме,
+# см. https://github.com/Netflix/eureka/wiki/Understanding-Eureka-Peer-to-Peer-Communication
+#    server:
+#        enableSelfPreservation: false
